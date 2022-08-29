@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
     exports: [],
 })
 export class sharedConstants {
-    public static API_ENDPOINT=environment.apiURL;
+    public static API_ENDPOINT="https://quinquiri.herokuapp.com/";
     public static HTTP_AUTH='Bearer';
     public static HTTP_TOKEN='token';
     public static HTTP_APPLICATION='Content-Type';
