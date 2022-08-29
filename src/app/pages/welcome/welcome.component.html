@@ -93,43 +93,47 @@
 <div class="m-rapport">
   <div *ngIf="result">
     <hr>
-    <h4>resultat Fenetre coulissante (67)</h4>
-    <h5>67103:</h5>
-    Nombre de bar: {{result.famille67.result103.nbrBars}} <br>
-    Taille des pieces: <span *ngFor="let piece of result.famille67.result103.piecesList"> {{piece}}mm,&nbsp; </span><br>
-    Dechets: <span *ngFor="let piece of result.famille67.result103.dechetsList"> {{piece}}mm,&nbsp; </span><br>
-    <h5>67104:</h5>
-    Nombre de bar: {{result.famille67.result104.nbrBars}} <br>
-    Taille des pieces: <span *ngFor="let piece of result.famille67.result104.piecesList"> {{piece}}mm,&nbsp;  </span><br>
-    Dechets: <span *ngFor="let piece of result.famille67.result104.dechetsList"> {{piece}}mm,&nbsp; </span><br>
-    <h5>67105:</h5>
-    Nombre de bar: {{result.famille67.result105.nbrBars}} <br>
-    Taille des pieces: <span *ngFor="let piece of result.famille67.result105.piecesList"> {{piece}}mm,&nbsp; </span><br>
-    Dechets: <span *ngFor="let piece of result.famille67.result105.dechetsList"> {{piece}}mm,&nbsp; </span><br>
-    <h5>67106:</h5>
-    Nombre de bar: {{result.famille67.result106.nbrBars}} <br>
-    Taille des pieces: <span *ngFor="let piece of result.famille67.result106.piecesList"> {{piece}}mm,&nbsp; </span><br>
-    Dechets: <span *ngFor="let piece of result.famille67.result106.dechetsList"> {{piece}}mm,&nbsp; </span><br>
-     <h5>67114:</h5>
-     Nombre de bar: {{result.famille67.result114.nbrBars}} <br>
-     Taille des pieces: <span *ngFor="let piece of result.famille67.result114.piecesList"> {{piece}}mm,&nbsp; </span><br>
-     Dechets: <span *ngFor="let piece of result.famille67.result114.dechetsList"> {{piece}}mm,&nbsp; </span><br>
-    <hr>
+    <div *ngIf="result.famille67.result103.nbrBars > 0">
+      <h4>resultat Fenetre coulissante (67)</h4>
+      <h5>67103:</h5>
+      Nombre de bar: {{result.famille67.result103.nbrBars}} <br>
+      Taille des pieces: <span *ngFor="let piece of result.famille67.result103.piecesList"> {{piece}}mm,&nbsp; </span><br>
+      Dechets: <span *ngFor="let piece of result.famille67.result103.dechetsList"> {{piece}}mm,&nbsp; </span><br>
+      <h5>67104:</h5>
+      Nombre de bar: {{result.famille67.result104.nbrBars}} <br>
+      Taille des pieces: <span *ngFor="let piece of result.famille67.result104.piecesList"> {{piece}}mm,&nbsp;  </span><br>
+      Dechets: <span *ngFor="let piece of result.famille67.result104.dechetsList"> {{piece}}mm,&nbsp; </span><br>
+      <h5>67105:</h5>
+      Nombre de bar: {{result.famille67.result105.nbrBars}} <br>
+      Taille des pieces: <span *ngFor="let piece of result.famille67.result105.piecesList"> {{piece}}mm,&nbsp; </span><br>
+      Dechets: <span *ngFor="let piece of result.famille67.result105.dechetsList"> {{piece}}mm,&nbsp; </span><br>
+      <h5>67106:</h5>
+      Nombre de bar: {{result.famille67.result106.nbrBars}} <br>
+      Taille des pieces: <span *ngFor="let piece of result.famille67.result106.piecesList"> {{piece}}mm,&nbsp; </span><br>
+      Dechets: <span *ngFor="let piece of result.famille67.result106.dechetsList"> {{piece}}mm,&nbsp; </span><br>
+       <h5>67114:</h5>
+       Nombre de bar: {{result.famille67.result114.nbrBars}} <br>
+       Taille des pieces: <span *ngFor="let piece of result.famille67.result114.piecesList"> {{piece}}mm,&nbsp; </span><br>
+       Dechets: <span *ngFor="let piece of result.famille67.result114.dechetsList"> {{piece}}mm,&nbsp; </span><br>
+      <hr>
+    </div>
 
-    <h4>resultat Fenetre à la française (40)</h4>
-    <h5>40404:</h5>
-    Nombre de bar: {{result.famille40.result404.nbrBars}} <br>
-    Taille des pieces: <span *ngFor="let piece of result.famille40.result404.piecesList"> {{piece}}mm,&nbsp; </span><br>
-    Dechets: <span *ngFor="let piece of result.famille40.result404.dechetsList"> {{piece}}mm,&nbsp; </span><br>
-    <h5>40402:</h5>
-    Nombre de bar: {{result.famille40.result402.nbrBars}} <br>
-    Taille des pieces: <span *ngFor="let piece of result.famille40.result402.piecesList"> {{piece}}mm,&nbsp; </span><br>
-    Dechets: <span *ngFor="let piece of result.famille40.result402.dechetsList"> {{piece}}mm,&nbsp; </span><br>
-    <h5>40112:</h5>
-    Nombre de bar: {{result.famille40.result112.nbrBars}} <br>
-    Taille des pieces: <span *ngFor="let piece of result.famille40.result112.piecesList"> {{piece}}mm,&nbsp; </span><br>
-    Dechets: <span *ngFor="let piece of result.famille40.result112.dechetsList"> {{piece}}mm,&nbsp; </span><br>
-    <hr>
+    <div *ngIf="result.famille40.result404.nbrBars > 0">
+      <h4>resultat Fenetre à la française (40)</h4>
+      <h5>40404:</h5>
+      Nombre de bar: {{result.famille40.result404.nbrBars}} <br>
+      Taille des pieces: <span *ngFor="let piece of result.famille40.result404.piecesList"> {{piece}}mm,&nbsp; </span><br>
+      Dechets: <span *ngFor="let piece of result.famille40.result404.dechetsList"> {{piece}}mm,&nbsp; </span><br>
+      <h5>40402:</h5>
+      Nombre de bar: {{result.famille40.result402.nbrBars}} <br>
+      Taille des pieces: <span *ngFor="let piece of result.famille40.result402.piecesList"> {{piece}}mm,&nbsp; </span><br>
+      Dechets: <span *ngFor="let piece of result.famille40.result402.dechetsList"> {{piece}}mm,&nbsp; </span><br>
+      <h5>40112:</h5>
+      Nombre de bar: {{result.famille40.result112.nbrBars}} <br>
+      Taille des pieces: <span *ngFor="let piece of result.famille40.result112.piecesList"> {{piece}}mm,&nbsp; </span><br>
+      Dechets: <span *ngFor="let piece of result.famille40.result112.dechetsList"> {{piece}}mm,&nbsp; </span><br>
+      <hr>
+    </div>
 
   </div>
 </div>
