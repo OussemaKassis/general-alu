@@ -1,0 +1,114 @@
+<div class="mod-dashboard">
+  <div class="m-cards">
+    <nz-card class="m-click" (click)="addToList(67)" style="width:300px;" [nzCover]="coverTemplate1">
+      <nz-card-meta
+        nzTitle="Fenetre coulissante (67)"
+        nzDescription="This is the description"
+      ></nz-card-meta>
+    </nz-card>
+    <nz-card class="m-click" (click)="addToList(40)" style="width:300px;" [nzCover]="coverTemplate2">
+      <nz-card-meta
+        nzTitle="Fenetre à la française (40)"
+        nzDescription="This is the description"
+      ></nz-card-meta>
+    </nz-card>
+    <nz-card class="m-error" style="width:300px;" [nzCover]="coverTemplate3">
+      <nz-card-meta
+        nzTitle="Porte Fenetre famille 80"
+        nzDescription="This is the description"
+      ></nz-card-meta>
+    </nz-card>
+  </div>
+  <ng-template #coverTemplate1>
+    <img alt="example" src="/assets/img/fen3.jpg" />
+  </ng-template>
+  <ng-template #coverTemplate2>
+    <img alt="example" src="/assets/img/fen2.jpg" />
+  </ng-template>
+  <ng-template #coverTemplate3>
+    <img alt="example" src="/assets/img/porte1.jpg" />
+  </ng-template>
+
+  <nz-modal [(nzVisible)]="isVisible" nzTitle="Entrer les dimensions de la fenêtre en mm" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+    <ng-container *nzModalContent>
+      <form nz-form [formGroup]="validateForm" (ngSubmit)="handleOk()">
+        <nz-form-item>
+          <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="height">Hauteur (mm)</nz-form-label>
+          <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Please enter a correct height">
+            <input nz-input formControlName="height" id="height" />
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="width" nzRequired>Largeur (mm)</nz-form-label>
+          <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Please enter a correct width">
+            <input nz-input type="width" id="width" formControlName="width"/>
+          </nz-form-control>
+        </nz-form-item>
+      </form>
+    </ng-container>
+  </nz-modal>
+<div class="m-list">
+  <nz-list class="demo-loadmore-list" >
+    <nz-list-item *ngFor="let item of list">
+      <ng-container *ngIf="!listIsLoading">
+        <nz-list-item-meta *ngIf="item.type == 67"
+                           nzAvatar="/assets/img/fen2.jpg"
+                           [nzDescription]="'Fenetre'">
+          <nz-list-item-meta-title>
+            <a >Fenetre de type: {{ item.type }} avec les dimensions {{ item.height }} x {{ item.width }}</a>
+          </nz-list-item-meta-title>
+        </nz-list-item-meta>
+
+        <nz-list-item-meta *ngIf="item.type == 40"
+                           nzAvatar="/assets/img/fen3.jpg"
+                           [nzDescription]="'Fenetre'">
+          <nz-list-item-meta-title>
+            <a >Fenetre de type: {{ item.type }} avec les dimensions {{ item.height }} x {{ item.width }}</a>
+          </nz-list-item-meta-title>
+        </nz-list-item-meta>
+
+        <nz-list-item-meta *ngIf="item.type == 80"
+                           nzAvatar="/assets/img/porte1.jpg"
+                           [nzDescription]="'Porte fenetre'">
+          <nz-list-item-meta-title>
+            <a >Fenetre de type: {{ item.type }} avec les dimensions {{ item.height }} x {{ item.width }}</a>
+          </nz-list-item-meta-title>
+        </nz-list-item-meta>
+        <ul nz-list-item-actions>
+          <nz-list-item-action><a (click)="edit(item.id)">edit</a></nz-list-item-action>
+          <nz-list-item-action><a (click)="remove(item.id)">remove</a></nz-list-item-action>
+        </ul>
+      </ng-container>
+      <nz-skeleton
+        *ngIf="listIsLoading"
+        [nzAvatar]="true"
+        [nzActive]="true"
+        [nzTitle]="false"
+        [nzLoading]="true"
+      ></nz-skeleton>
+    </nz-list-item>
+  </nz-list>
+</div>
+
+  <!-- <div *ngIf="result">
+    <h4>resultat 67</h4>
+    <h5>103</h5>
+    nombre de bar : {{result.result103.nbrBars}}
+    <h5>104</h5>
+    nombre de bar : {{result.result104.nbrBars}}
+    <h5>105</h5>
+    nombre de bar : {{result.result105.nbrBars}}
+    <h5>106</h5>
+    nombre de bar : {{result.result106.nbrBars}}
+     <h5>114</h5>
+    nombre de bar : {{result.result114.nbrBars}}
+  </div> -->
+  <div class="m-button-container">
+    <button [nzLoading]="loading" nz-button nzType="primary" [nzSize]="'large'" (click)="calculeFront()">
+      <span *ngIf="!loading" nz-icon nzType="thunderbolt" nzTheme="outline"></span>
+      Calculer
+    </button>
+  </div>
+
+</div>
+

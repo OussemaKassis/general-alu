@@ -1,0 +1,19 @@
+.container {
+width: 500px;
+  height: 300px;
+  margin-top: 5rem;
+
+}
+.flex {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1.5rem;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

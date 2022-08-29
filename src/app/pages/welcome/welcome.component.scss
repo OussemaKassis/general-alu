@@ -1,0 +1,46 @@
+
+.mod-dashboard {
+  padding: 60px 0;
+  width: 843px;
+  margin: auto;
+
+  .m-list {
+    margin: 50px;
+  }
+  .m-error {
+    cursor: not-allowed;
+  }
+  .m-click {
+    cursor: pointer;
+    transition: 0.4s;
+    padding: 10px;
+    &:hover {
+      box-shadow: 0 0 10px grey;
+    }
+  }
+  .m-cards {
+    display: flex;
+    justify-content: center;
+    gap: 37px;
+  }
+  .demo-loadmore-list {
+    min-height: 350px;
+  }
+  .loadmore {
+    text-align: center;
+    margin-top: 12px;
+    height: 32px;
+    line-height: 32px;
+  }
+  .inner-content {
+    padding: 24px;
+    background: #fff;
+    min-height: 360px;
+  }
+  nz-footer {
+    text-align: center;
+  }
+  .m-button-container {
+    float: right;
+  }
+}

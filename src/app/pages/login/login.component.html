@@ -1,0 +1,18 @@
+<div class="main" >
+  <div class="flex container">
+
+    <h1>Bienvenue</h1>
+
+    <nz-alert  *ngIf="error" nzType="error" style="width: 100%" nzMessage="Nom ou mot de passe incorrecte."></nz-alert>
+    <nz-input-group>
+      <input type="text" nz-input placeholder="Saisir votre nom" [(ngModel)]="user.name"/>
+    </nz-input-group>
+    <nz-input-group>
+      <input type="password" nz-input placeholder="Saisir votre mot de passe"  [(ngModel)]="user.password"/>
+    </nz-input-group>
+    <button nz-button nzType="primary" (click)="click()" style="width: 100%">Connecter</button>
+  </div>
+
+
+
+</div>
