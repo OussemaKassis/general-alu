@@ -87,7 +87,7 @@ export class WelcomeComponent implements OnInit {
       let data40402 = this.resourceService.calcule40402(this.list);
       let data40404 = this.resourceService.calcule40404(this.list);
       let data40112 = this.resourceService.calcule40112(this.list);
-      // let data67114 = this.resourceService.calcule67114(this.list);
+      let data67114 = this.resourceService.calcule67114(this.list);
 
       let result = {
         famille67: {
@@ -95,7 +95,7 @@ export class WelcomeComponent implements OnInit {
           result104: data67104,
           result105: data67105,
           result106: data67106,
-          // result114: data67114
+          result114: data67114
         },
         famille40: {
           result402: data40402,
@@ -103,13 +103,10 @@ export class WelcomeComponent implements OnInit {
           result112: data40112
         }
       }
-      console.log(this.loading);
       setTimeout(() => {
         this.loading = false;
-        console.log(this.loading);
         this.result = result;
         console.log(this.result);
-        console.log(this.result.length);
       }, 1000);
     }
   }
